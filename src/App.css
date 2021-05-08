@@ -8,6 +8,7 @@ body{
   width: 400px;
   margin: 40px auto;
 }
+
 #to-do-form input{
   background-color: rgb(7, 133, 91);
   border: 0;
