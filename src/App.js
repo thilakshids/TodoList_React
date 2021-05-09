@@ -28,6 +28,16 @@ class App extends React.Component{
     e.preventDefault();
     const newItem = this.state.currentItem;
     console.log(newItem);
+    if(newItem.text!==""){
+      const items=[...this.state.items, newItem];
+      this.setState({
+        items:newItem,
+        currentItem:{
+          text:'',
+          key:''
+        }
+      })
+    }
   }
   render(){
     return(
