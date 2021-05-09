@@ -9,10 +9,13 @@ class App extends React.Component{
       items:[],
       currentItem:{
         text:'',
-        ke:''
+        key:''
       }
     }
+    this.handleInput= this.handleInput.bind(this); 
+    this.addItem= this.addItem.bind(this); 
   }
+
   handleInput(e){
     this.setState({
       currentItem:{
@@ -21,14 +24,18 @@ class App extends React.Component{
       }
     })
   }
+  addItem(e){
+    e.preventDefault();
+    const newItem = this.state.currentItem;
+    console.log(newItem);
+  }
   render(){
     return(
       <div className="App">
         <header>
         <form id="to-do-form" onSubmit={this.addItem}>
-          <input type="text" placeholder="Enter tex"
-          value={this.state.currentItem}/>
-          onChnage={this.handleInput}
+          <input type="text" placeholder="sample text"
+          value={this.state.currentItem}/> onChnage={this.handleInput}
           <button type="submit">Add</button>
         </form>
       </header>
