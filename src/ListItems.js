@@ -6,7 +6,7 @@ function ListItems(props){
     const ListItems = items.map(item =>{
         return<div className="list" key="item.key">
 
-        <p>{item.text}</p>
+        {/* <p>{item.text}</p> */}
 
         </div>
     })
